@@ -80,6 +80,8 @@
         </a>
       </li>
     </ul>
+    <div id="abc"></div>
+    <button @click="a">点击测试jq</button>
   </div>
 </template>
 
@@ -90,6 +92,11 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  methods: {
+      a() {
+          $('#abc').html(1);
+      }
   }
 }
 </script>
