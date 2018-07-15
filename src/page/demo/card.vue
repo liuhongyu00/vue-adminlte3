@@ -119,11 +119,15 @@
 </template>
 
 <script>
+import main from '@/assets/js/main'
 import card from "@/components/module/card";
 
 export default {
     components: {
         card
+    },
+    created() {
+        main.request()
     }
 };
 </script>
