@@ -23,44 +23,12 @@
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- 使用.nav-icon类将图标添加到链接中有了font-awesome或其他图标字体库 -->
-                    <li class="nav-item has-treeview menu-open">
-                        <a href="#" class="nav-link active">
-                            <i class="nav-icon fa fa-dashboard"></i>
-                            <p>
-                                默认选中
-                                <i class="right fa fa-angle-left"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link active">
-                                    <i class="fa fa-circle-o nav-icon"></i>
-                                    <p>默认选中</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="fa fa-circle-o nav-icon"></i>
-                                    <p>普通标签</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fa fa-th"></i>
+                        <router-link class="nav-link" to="/card">
+                            <i class="fa fa-circle-o nav-icon"></i>
                             <p>
-                                带icon的菜单
-                                <span class="right badge badge-danger">New</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <router-link class="nav-link" to="/demo">
-                            <i class="nav-icon fa fa-th"></i>
-                            <p>
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                demo页
+                                卡片
                             </p>
                         </router-link>
                     </li>

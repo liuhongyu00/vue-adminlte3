@@ -1,9 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-// 引入页面
+// adminlte容器
 import adminlte_container from '@/components/adminlte/adminlte_container'
-import demo from '@/components/page/demo'
+// adminlte功能页面
+import card from '@/page/demo/card'
+
+// 404
+import notFound from '@/components/error/404'
+// 500
+import serverError from '@/components/error/500'
 
 Vue.use(Router)
 
@@ -18,11 +24,23 @@ export default new Router({
     },
     // adminlte功能页面
     children: [{
-      // demo测试页
-      path: '/demo',
+      // card演示页
+      path: '/card',
       components: {
-        adminlte: demo
+        adminlte: card
       },
+    }, {
+      // 500错误
+      path: '/500',
+      components: {
+        adminlte: serverError
+      }
+    }, {
+      // 404错误
+      path: '*',
+      components: {
+        adminlte: notFound
+      }
     }]
   }]
 })
